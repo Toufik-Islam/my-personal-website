@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em><i class="fas fa-moon"></i> / <i class="fas fa-sun"></i></em>
+    </div>
+
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html" class="active"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="achievements.html"><i class="fas fa-trophy"></i> Achievements</a></li>
+                    <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                    <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a></li>
+                    <li><a href="skills.html"><i class="fas fa-code"></i> Skills</a></li>
+                    <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="profile-container">
+                <div class="profile-details">
+                    <h1>About Me</h1>
+                    <h2>Passionate Competitive Programmer & CS Student</h2>
+                </div>
+                <div class="profile-image">
+                    <img src="../images/logo.jpg" alt="Toufik Islam">
+                </div>
+            </div>
+
+            <section id="about">
+                <h3><i class="fas fa-user-circle"></i> Personal Profile</h3>
+                <p>I consider myself a responsible and orderly person. Passionate and accomplished Competitive Programmer with a proven track record in algorithmic problem-solving and coding challenges.</p>
+                
+                <div class="grid-container" style="margin-top: 30px;">
+                    <div class="about-card">
+                        <h4><i class="fas fa-laptop-code"></i> Technical Background</h4>
+                        <p>I specialize in competitive programming, algorithm optimization, and software development. With a strong foundation in data structures and algorithms, I enjoy solving complex programming challenges.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h4><i class="fas fa-medal"></i> Competitive Programming</h4>
+                        <p>As an active competitive programmer, I've participated in numerous coding contests including ICPC regionals and various national programming competitions.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h4><i class="fas fa-chalkboard-teacher"></i> Mentorship</h4>
+                        <p>Currently mentoring at Shohoj Coding Platform, I help aspiring programmers enhance their problem-solving skills and algorithmic thinking.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h4><i class="fas fa-book"></i> Academic Focus</h4>
+                        <p>Pursuing my BSc in Computer Science and Engineering at Sylhet Engineering College with a strong academic record (CGPA: 3.60).</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/toufik-islam/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:toufikislam26@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Toufik Islam. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const toggleSwitch = document.querySelector('#checkbox');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.body.className = currentTheme;
+            if (currentTheme === 'light-mode') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.body.className = 'light-mode';
+                localStorage.setItem('theme', 'light-mode');
+            } else {
+                document.body.className = 'dark-mode';
+                localStorage.setItem('theme', 'dark-mode');
+            }    
+        }
+
+        toggleSwitch.addEventListener('change', switchTheme);
+    </script>
+</body>
+</html>
